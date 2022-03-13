@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ShoutingInputs {
     public String onlyShouting(String[] array){
            if(array[0].equals(array[0].toUpperCase())){
