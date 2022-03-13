@@ -1,20 +1,14 @@
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class SimpleInputsTest{
     SimpleInputs simpleInputs = new SimpleInputs();
-
-    @Before
-    public void shout(){
-        System.out.println("Begins");
-    }
+    String test;
 
     @Test
     public void testEmptyArray(){
         String[] empty = new String[0];
-        String test = simpleInputs.emptyArray(empty);
+        test = simpleInputs.emptyArray(empty);
 
         Assert.assertEquals("Hello, my friend", test);
     }
@@ -22,14 +16,15 @@ public class SimpleInputsTest{
     @Test
     public void testSingleInput(){
         String[] stringArray = new String[] {"John"};
-        String test = simpleInputs.singleArray(stringArray);
+        test = simpleInputs.singleArray(stringArray);
 
         Assert.assertEquals("Hello, John", test);
     }
+    @Test
+    public void testMultipleInput(){
+        String[] stringArray = new String[] {"John", "József", "Matyi"};
+        test = simpleInputs.singleArray(stringArray);
 
-    @After
-    public void shout2(){
-        System.out.println("Ends");
+        Assert.assertEquals("Hello, " + stringArray[0] + ", " + stringArray[1] + " and " + stringArray[2], test);
     }
-
 }
