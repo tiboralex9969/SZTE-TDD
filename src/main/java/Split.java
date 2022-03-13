@@ -6,6 +6,7 @@ public class Split {
        for(int i = 0; i < array.length; i++){
            sb.append(array[i]);
        }
+       
        String str = sb.toString();
        if(str.contains(",")){
            str = str.replace(",", ", and ");
